@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MarketModelStoreContainer" CdmEntityContainer="MarketEntities">
+    <EntitySetMapping Name="urunler">
+      <EntityTypeMapping TypeName="MarketModel.urunTablosu">
+        <MappingFragment StoreEntitySet="urunler">
+          <ScalarProperty Name="urunID" ColumnName="urunID" />
+          <ScalarProperty Name="urunBarkod" ColumnName="urunBarkod" />
+          <ScalarProperty Name="urunAd" ColumnName="urunAd" />
+          <ScalarProperty Name="urunFiyat" ColumnName="urunFiyat" />
+          <ScalarProperty Name="urunStok" ColumnName="urunStok" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sepetTbs">
+      <EntityTypeMapping TypeName="MarketModel.sepetTb">
+        <MappingFragment StoreEntitySet="sepetTb">
+          <ScalarProperty Name="sepetStok" ColumnName="sepetStok" />
+          <ScalarProperty Name="sepetFiyat" ColumnName="sepetFiyat" />
+          <ScalarProperty Name="sepetAd" ColumnName="sepetAd" />
+          <ScalarProperty Name="sepetBarkod" ColumnName="sepetBarkod" />
+          <ScalarProperty Name="sepetID" ColumnName="sepetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

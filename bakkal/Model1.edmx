@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MarketModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sepetTb">
+          <Key>
+            <PropertyRef Name="sepetID" />
+          </Key>
+          <Property Name="sepetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sepetBarkod" Type="varchar" MaxLength="50" />
+          <Property Name="sepetAd" Type="varchar" MaxLength="50" />
+          <Property Name="sepetFiyat" Type="varchar" MaxLength="50" />
+          <Property Name="sepetStok" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="urunler">
+          <Key>
+            <PropertyRef Name="urunID" />
+          </Key>
+          <Property Name="urunID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="urunBarkod" Type="nvarchar" MaxLength="50" />
+          <Property Name="urunAd" Type="nvarchar" MaxLength="50" />
+          <Property Name="urunFiyat" Type="nvarchar" MaxLength="50" />
+          <Property Name="urunStok" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="MarketModelStoreContainer">
+          <EntitySet Name="sepetTb" EntityType="Self.sepetTb" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="urunler" EntityType="Self.urunler" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MarketModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="urunTablosu">
+          <Key>
+            <PropertyRef Name="urunID" />
+          </Key>
+          <Property Name="urunID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="urunBarkod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="urunAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="urunFiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="urunStok" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="MarketEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="urunler" EntityType="MarketModel.urunTablosu" />
+          <EntitySet Name="sepetTbs" EntityType="MarketModel.sepetTb" />
+        </EntityContainer>
+        <EntityType Name="sepetTb">
+          <Key>
+            <PropertyRef Name="sepetID" />
+          </Key>
+          <Property Name="sepetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sepetBarkod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sepetAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sepetFiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sepetStok" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MarketModelStoreContainer" CdmEntityContainer="MarketEntities">
+          <EntitySetMapping Name="urunler">
+            <EntityTypeMapping TypeName="MarketModel.urunTablosu">
+              <MappingFragment StoreEntitySet="urunler">
+                <ScalarProperty Name="urunID" ColumnName="urunID" />
+                <ScalarProperty Name="urunBarkod" ColumnName="urunBarkod" />
+                <ScalarProperty Name="urunAd" ColumnName="urunAd" />
+                <ScalarProperty Name="urunFiyat" ColumnName="urunFiyat" />
+                <ScalarProperty Name="urunStok" ColumnName="urunStok" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sepetTbs">
+            <EntityTypeMapping TypeName="MarketModel.sepetTb">
+              <MappingFragment StoreEntitySet="sepetTb">
+                <ScalarProperty Name="sepetStok" ColumnName="sepetStok" />
+                <ScalarProperty Name="sepetFiyat" ColumnName="sepetFiyat" />
+                <ScalarProperty Name="sepetAd" ColumnName="sepetAd" />
+                <ScalarProperty Name="sepetBarkod" ColumnName="sepetBarkod" />
+                <ScalarProperty Name="sepetID" ColumnName="sepetID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MarketModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="urunTablosu">
+    <Key>
+      <PropertyRef Name="urunID" />
+    </Key>
+    <Property Name="urunID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="urunBarkod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="urunAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="urunFiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="urunStok" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="MarketEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="urunler" EntityType="MarketModel.urunTablosu" />
+    <EntitySet Name="sepetTbs" EntityType="MarketModel.sepetTb" />
+  </EntityContainer>
+  <EntityType Name="sepetTb">
+    <Key>
+      <PropertyRef Name="sepetID" />
+    </Key>
+    <Property Name="sepetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sepetBarkod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sepetAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sepetFiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sepetStok" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

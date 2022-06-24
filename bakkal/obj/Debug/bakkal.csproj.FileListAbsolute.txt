@@ -1,0 +1,15 @@
+C:\Users\mhuda\Desktop\bakkal\obj\Debug\bakkal.csproj.AssemblyReference.cache
+C:\Users\mhuda\Desktop\bakkal\obj\Debug\bakkal.csproj.SuggestedBindingRedirects.cache
+C:\Users\mhuda\Desktop\bakkal\obj\Debug\bakkal.Form1.resources
+C:\Users\mhuda\Desktop\bakkal\obj\Debug\bakkal.Properties.Resources.resources
+C:\Users\mhuda\Desktop\bakkal\obj\Debug\bakkal.tumurunler.resources
+C:\Users\mhuda\Desktop\bakkal\obj\Debug\bakkal.csproj.GenerateResource.cache
+C:\Users\mhuda\Desktop\bakkal\bin\Debug\bakkal.exe.config
+C:\Users\mhuda\Desktop\bakkal\bin\Debug\bakkal.exe
+C:\Users\mhuda\Desktop\bakkal\bin\Debug\bakkal.pdb
+C:\Users\mhuda\Desktop\bakkal\bin\Debug\EntityFramework.xml
+C:\Users\mhuda\Desktop\bakkal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mhuda\Desktop\bakkal\obj\Debug\bakkal.csproj.CoreCompileInputs.cache
+C:\Users\mhuda\Desktop\bakkal\obj\Debug\bakkal.csproj.CopyComplete
+C:\Users\mhuda\Desktop\bakkal\obj\Debug\bakkal.exe
+C:\Users\mhuda\Desktop\bakkal\obj\Debug\bakkal.pdb

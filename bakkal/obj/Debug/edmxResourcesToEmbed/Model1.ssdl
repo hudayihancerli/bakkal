@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MarketModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sepetTb">
+    <Key>
+      <PropertyRef Name="sepetID" />
+    </Key>
+    <Property Name="sepetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sepetBarkod" Type="varchar" MaxLength="50" />
+    <Property Name="sepetAd" Type="varchar" MaxLength="50" />
+    <Property Name="sepetFiyat" Type="varchar" MaxLength="50" />
+    <Property Name="sepetStok" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="urunler">
+    <Key>
+      <PropertyRef Name="urunID" />
+    </Key>
+    <Property Name="urunID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="urunBarkod" Type="nvarchar" MaxLength="50" />
+    <Property Name="urunAd" Type="nvarchar" MaxLength="50" />
+    <Property Name="urunFiyat" Type="nvarchar" MaxLength="50" />
+    <Property Name="urunStok" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="MarketModelStoreContainer">
+    <EntitySet Name="sepetTb" EntityType="Self.sepetTb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="urunler" EntityType="Self.urunler" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
